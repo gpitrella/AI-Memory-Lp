@@ -83,7 +83,7 @@ export default function GettingStarted() {
                     Installation
                   </h2>
                   <div className="bg-gray-900/80 border border-gray-700 rounded-xl p-4">
-                    <pre className="text-gray-100 font-mono text-sm">npm install @gpitrella/ai-memory</pre>
+                    <pre className="text-gray-100 font-mono text-sm">npm install aimemory-core</pre>
                   </div>
                 </div>
 

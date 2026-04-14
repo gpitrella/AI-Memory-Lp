@@ -155,7 +155,7 @@ export default function Home() {
   const [copied, setCopied] = useState(false)
 
   const copyCode = () => {
-    navigator.clipboard.writeText('npm install @gpitrella/ai-memory')
+    navigator.clipboard.writeText('npm install aimemory-core')
     setCopied(true)
     setTimeout(() => setCopied(false), 2000)
   }
@@ -256,7 +256,7 @@ export default function Home() {
                   className="group relative inline-flex items-center justify-center px-6 py-3 text-base font-medium text-white bg-gradient-to-r from-emerald-500 to-teal-600 rounded-xl hover:from-emerald-600 hover:to-teal-700 transition-all duration-300 shadow-lg hover:shadow-emerald-500/25"
                 >
                   <Terminal className="mr-2 w-5 h-5" />
-                  {copied ? 'Copied!' : 'npm install @gpitrella/ai-memory'}
+                  {copied ? 'Copied!' : 'npm install aimemory-core'}
                   <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </button>
                 <Link
@@ -681,7 +681,7 @@ export default function Home() {
               className="inline-flex items-center px-8 py-4 text-lg font-medium rounded-xl text-gray-900 bg-white hover:bg-gray-100 transition-colors"
             >
               <Terminal className="mr-2 w-5 h-5" />
-              npm install @gpitrella/ai-memory
+              npm install aimemory-core
             </button>
             <Link
               href="https://github.com/gpitrella/ai-memory"

@@ -4,36 +4,61 @@ import { useState } from 'react'
 import { Code, Database, Search, Users, Zap, Shield, ArrowRight, Github, Terminal, BookOpen, Check, Brain, Sparkles, Layers, Lock, Globe, Cpu, Rocket, Star, DollarSign, Clock, TrendingUp, MessageSquare, ChevronRight, ArrowDown, Server, DatabaseZap, Bot, RefreshCw } from 'lucide-react'
 import Link from 'next/link'
 
+const faqData = [
+  {
+    question: 'What is AI Memory?',
+    answer: 'AI Memory is a persistent memory system for AI applications. It allows AI models like ChatGPT, Claude, and Gemini to remember user preferences, conversation history, and contextual information across sessions.',
+  },
+  {
+    question: 'How does it work?',
+    answer: 'AI Memory stores memories using vector embeddings for semantic search. When you call brain.remember(), it stores information. When you call brain.recall(), it retrieves relevant memories based on semantic similarity.',
+  },
+  {
+    question: 'What AI models are supported?',
+    answer: 'AI Memory works with any LLM that accepts text input, including OpenAI GPT-4, Claude, Gemini, Llama, Mistral, and custom models.',
+  },
+  {
+    question: 'How much does it cost?',
+    answer: 'We offer a free tier with 100 memories/day. Paid plans start at $3/month for 1,000 memories/day with cloud sync.',
+  },
+]
+
 const features = [
   {
     icon: Brain,
     title: 'Memory That Never Forgets',
     description: 'Persistent semantic memory for any AI. Your users preferences, history, and context - always available.',
+    keywords: ['persistent memory', 'user preferences', 'conversation history'],
   },
   {
     icon: Search,
     title: 'Instant Recall',
     description: 'Vector-based semantic search finds the right memory in milliseconds. No more cold starts.',
+    keywords: ['semantic search', 'vector embeddings', 'fast retrieval'],
   },
   {
     icon: Layers,
     title: 'Multi-Layer Context',
     description: 'From individual preferences to team knowledge. Scales from solo devs to enterprise organizations.',
+    keywords: ['multi-user', 'team memory', 'enterprise'],
   },
   {
     icon: Zap,
     title: 'TypeScript Native',
     description: 'Full TypeScript support with complete type definitions. Works everywhere Node.js runs.',
+    keywords: ['TypeScript', 'developer tools', 'npm'],
   },
   {
     icon: Lock,
     title: 'Secure by Default',
     description: 'API key authentication, rate limiting, and encrypted storage built-in from day one.',
+    keywords: ['API key', 'security', 'rate limiting'],
   },
   {
     icon: Globe,
     title: 'Works Everywhere',
     description: 'NPM package, Chrome extension, or cloud API. Your AI remembers on any platform.',
+    keywords: ['NPM package', 'browser extension', 'cross-platform'],
   },
 ]
 

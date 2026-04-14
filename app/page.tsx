@@ -203,13 +203,13 @@ export default function Home() {
             </div>
             <div className="flex items-center space-x-3">
               <Link
-                href="https://dashboard.aimemory.lat/login"
+                href="https://dashboard-aimemory.lat/login"
                 className="px-4 py-2 text-sm font-medium text-gray-300 hover:text-white transition-colors"
               >
                 Sign In
               </Link>
               <Link
-                href="https://dashboard.aimemory.lat/register"
+                href="https://dashboard-aimemory.lat/register"
                 className="px-4 py-2 text-sm font-medium text-white bg-gradient-to-r from-emerald-500 to-teal-600 rounded-lg hover:from-emerald-600 hover:to-teal-700 transition-all"
               >
                 Get Started

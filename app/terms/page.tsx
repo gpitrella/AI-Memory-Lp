@@ -184,7 +184,7 @@ export default function TermsPage() {
                   <p className="text-gray-300">Gabriel Pitrella</p>
                   <p className="text-gray-400 text-sm mt-2">
                     <strong>Email:</strong> support@aimemory.lat<br />
-                    <strong>Website:</strong> https://aimemory.dev
+                    <strong>Website:</strong> https://aimemory.lat
                   </p>
                 </div>
 
@@ -282,7 +282,7 @@ export default function TermsPage() {
                 <div>
                   <h3 className="text-lg font-medium text-purple-400 mb-2">15.3 Trademarks</h3>
                   <p className="text-gray-400 leading-relaxed">
-                    "AI Memory", the brain icon/logo, "aimemory.dev", and all related marks are trademarks of 
+                    "AI Memory", the brain icon/logo, "aimemory.lat", and all related marks are trademarks of 
                     <strong> Gabriel Pitrella</strong>. You may not use these trademarks without prior written permission.
                   </p>
                 </div>

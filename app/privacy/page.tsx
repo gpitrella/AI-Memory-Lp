@@ -340,7 +340,7 @@ export default function PrivacyPage() {
                   <p className="text-gray-300">Gabriel Pitrella</p>
                   <p className="text-gray-400 text-sm mt-2">
                     <strong>Email:</strong> support@aimemory.lat<br />
-                    <strong>Website:</strong> https://aimemory.dev
+                    <strong>Website:</strong> https://aimemory.lat
                   </p>
                 </div>
 

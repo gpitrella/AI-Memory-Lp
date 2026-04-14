@@ -1,6 +1,6 @@
 # AI Memory Landing
 
-This is the official landing page for [AI Memory](https://aimemory.dev) - a persistent memory system for AI applications.
+This is the official landing page for [AI Memory](https://aimemory.lat) - a persistent memory system for AI applications.
 
 ## Getting Started
 

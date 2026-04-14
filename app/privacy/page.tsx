@@ -232,7 +232,7 @@ export default function PrivacyPage() {
                 please contact us:
               </p>
               <ul className="list-disc list-inside text-gray-400 space-y-2 ml-4">
-                <li><strong>Email:</strong> support@aimemory.dev</li>
+                <li><strong>Email:</strong> support@aimemory.lat</li>
                 <li><strong>GitHub:</strong> Open an issue on our repository</li>
               </ul>
               <p className="text-gray-400 leading-relaxed mt-4">
@@ -304,7 +304,7 @@ export default function PrivacyPage() {
                     To request a refund, contact us at:
                   </p>
                   <ul className="list-disc list-inside text-gray-400 space-y-1 ml-4">
-                    <li><strong>Email:</strong> support@aimemory.dev</li>
+                    <li><strong>Email:</strong> support@aimemory.lat</li>
                     <li><strong>Subject Line:</strong> Refund Request</li>
                   </ul>
                 </div>
@@ -339,7 +339,7 @@ export default function PrivacyPage() {
                   <p className="text-white font-semibold mb-2">Owner / Data Controller</p>
                   <p className="text-gray-300">Gabriel Pitrella</p>
                   <p className="text-gray-400 text-sm mt-2">
-                    <strong>Email:</strong> support@aimemory.dev<br />
+                    <strong>Email:</strong> support@aimemory.lat<br />
                     <strong>Website:</strong> https://aimemory.dev
                   </p>
                 </div>

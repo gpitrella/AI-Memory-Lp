@@ -167,7 +167,7 @@ export default function TermsPage() {
               <h2 className="text-xl font-semibold text-white mb-4">12. Contact Information</h2>
               <p className="text-gray-400 leading-relaxed">
                 If you have any questions about these Terms of Service, please contact us at: <br />
-                <span className="text-blue-400">support@aimemory.dev</span>
+                <span className="text-blue-400">support@aimemory.lat</span>
               </p>
             </section>
 
@@ -183,7 +183,7 @@ export default function TermsPage() {
                   <p className="text-white font-semibold mb-2">Owner / Operator</p>
                   <p className="text-gray-300">Gabriel Pitrella</p>
                   <p className="text-gray-400 text-sm mt-2">
-                    <strong>Email:</strong> support@aimemory.dev<br />
+                    <strong>Email:</strong> support@aimemory.lat<br />
                     <strong>Website:</strong> https://aimemory.dev
                   </p>
                 </div>
@@ -239,7 +239,7 @@ export default function TermsPage() {
                   <h3 className="text-lg font-medium text-blue-400 mb-2">14.4 Refund Policy</h3>
                   <p className="text-gray-400 leading-relaxed">
                     Refunds are provided within 30 days of purchase under our money-back guarantee. After 30 days, 
-                    no refunds are provided for partial billing periods. Contact <span className="text-blue-400">support@aimemory.dev</span> for refund requests.
+                    no refunds are provided for partial billing periods. Contact <span className="text-blue-400">support@aimemory.lat</span> for refund requests.
                   </p>
                 </div>
               </div>

@@ -5,7 +5,7 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://ai-memory.dev'),
+  metadataBase: new URL('https://www.aimemory.lat'),
   title: 'AI Memory - Persistent Memory for AI Applications',
   description: 'The Monetization-First Memory Layer for AI. Add persistent memory to any AI with semantic search, vector embeddings, and built-in billing.',
   keywords: ['AI memory', 'LLM memory', 'persistent memory', 'vector embeddings', 'semantic search', 'AI chatbot memory', 'chrome extension', 'memory for ChatGPT'],

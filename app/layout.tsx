@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     description: 'Add persistent memory to any AI application. Semantic search, vector embeddings, context management, and built-in billing.',
     images: [
       {
-        url: '/og-image.png',
+        url: '/og-image.svg',
         width: 1200,
         height: 630,
         alt: 'AI Memory - Persistent Memory for AI',
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
     description: 'Add persistent memory to any AI. Semantic search, vector embeddings, built-in billing.',
     site: '@aimemory_dev',
     creator: '@aimemory_dev',
-    images: ['/og-image.png'],
+    images: ['/og-image.svg'],
   },
   robots: {
     index: true,

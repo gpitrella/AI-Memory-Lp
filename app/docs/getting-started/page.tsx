@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { ArrowLeft, BookOpen, Code, Zap, Check } from 'lucide-react'
+import { ArrowLeft, BookOpen, Code, Zap, Check, Brain } from 'lucide-react'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
@@ -15,14 +15,10 @@ export default function GettingStarted() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center">
-              <Link href="/" className="flex items-center space-x-3 group">
-                <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-blue-500 via-indigo-500 to-purple-500 flex items-center justify-center">
-                  <Zap className="w-5 h-5 text-white" />
-                </div>
-                <span className="text-xl font-bold bg-gradient-to-r from-blue-400 via-purple-500 to-green-400 bg-clip-text text-transparent">
-                  AI Memory
-                </span>
-              </Link>
+              <Link href="/" className="flex items-center space-x-2">
+              <Brain className="w-8 h-8 text-emerald-400" />
+              <span className="text-lg font-bold text-white">AI Memory</span>
+            </Link>
             </div>
             <div className="hidden md:flex items-center space-x-6">
               <Link href="/" className="text-sm font-medium text-gray-300 hover:text-white transition-colors">

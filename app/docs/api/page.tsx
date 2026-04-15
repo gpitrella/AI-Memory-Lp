@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { ArrowLeft, Code, BookOpen, Zap, Layers } from 'lucide-react'
+import { ArrowLeft, Code, BookOpen, Zap, Layers, Brain } from 'lucide-react'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
@@ -32,14 +32,10 @@ export default function APIPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center">
-              <Link href="/" className="flex items-center space-x-3 group">
-                <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-blue-500 via-indigo-500 to-purple-500 flex items-center justify-center">
-                  <Zap className="w-5 h-5 text-white" />
-                </div>
-                <span className="text-xl font-bold bg-gradient-to-r from-blue-400 via-purple-500 to-green-400 bg-clip-text text-transparent">
-                  AI Memory
-                </span>
-              </Link>
+              <Link href="/" className="flex items-center space-x-2">
+              <Brain className="w-8 h-8 text-emerald-400" />
+              <span className="text-lg font-bold text-white">AI Memory</span>
+            </Link>
             </div>
             <div className="hidden md:flex items-center space-x-6">
               <Link href="/" className="text-sm font-medium text-gray-300 hover:text-white transition-colors">Home</Link>
@@ -234,6 +230,51 @@ console.log(\`Max memories: \${plan.limits.maxMemories}\`);`}
                 </div>
               </div>
 
+              {/* REST API Endpoints */}
+              <div className="bg-gray-800/30 border border-gray-700/50 rounded-2xl p-6">
+                <div className="flex items-center mb-6">
+                  <div className="w-10 h-10 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-500 flex items-center justify-center mr-4">
+                    <Code className="w-5 h-5 text-white" />
+                  </div>
+                  <div>
+                    <h2 className="text-2xl font-semibold text-white">REST API Endpoints</h2>
+                    <p className="text-gray-400 text-sm">Base URL: https://api.aimemory.lat/v1</p>
+                  </div>
+                </div>
+
+                <div className="space-y-4">
+                  {[
+                    { method: 'GET', path: '/memories', desc: 'List all memories' },
+                    { method: 'POST', path: '/memories', desc: 'Create a new memory' },
+                    { method: 'GET', path: '/memories/:id', desc: 'Get memory by ID' },
+                    { method: 'PUT', path: '/memories/:id', desc: 'Update a memory' },
+                    { method: 'DELETE', path: '/memories/:id', desc: 'Delete a memory' },
+                    { method: 'POST', path: '/memories/search', desc: 'Search memories' },
+                    { method: 'GET', path: '/context', desc: 'Get AI context' },
+                    { method: 'GET', path: '/events', desc: 'List events' },
+                    { method: 'POST', path: '/events', desc: 'Record an event' },
+                    { method: 'GET', path: '/analytics/summary', desc: 'Get analytics summary' },
+                    { method: 'GET', path: '/workspaces', desc: 'List workspaces' },
+                    { method: 'POST', path: '/workspaces', desc: 'Create workspace' },
+                    { method: 'GET', path: '/organizations', desc: 'List organizations' },
+                    { method: 'POST', path: '/organizations', desc: 'Create organization' },
+                    { method: 'GET', path: '/members', desc: 'List team members' },
+                    { method: 'POST', path: '/webhooks', desc: 'Create webhook' },
+                  ].slice(0, 10).map((endpoint, i) => (
+                    <div key={i} className="flex items-center p-3 bg-gray-900/50 rounded-lg">
+                      <span className={`px-2 py-1 text-xs font-mono rounded mr-3 ${
+                        endpoint.method === 'GET' ? 'bg-blue-600/20 text-blue-400' :
+                        endpoint.method === 'POST' ? 'bg-green-600/20 text-green-400' :
+                        endpoint.method === 'PUT' ? 'bg-yellow-600/20 text-yellow-400' :
+                        'bg-red-600/20 text-red-400'
+                      }`}>{endpoint.method}</span>
+                      <code className="text-sm text-gray-300 font-mono">{endpoint.path}</code>
+                      <span className="ml-auto text-sm text-gray-500">{endpoint.desc}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
               {/* Available Plans */}
               <div className="bg-gray-800/30 border border-gray-700/50 rounded-2xl p-6">
                 <div className="flex items-center mb-6">
@@ -253,51 +294,59 @@ console.log(\`Max memories: \${plan.limits.maxMemories}\`);`}
                         <th className="px-6 py-3 text-left text-xs font-medium text-gray-400 uppercase tracking-wider">Feature</th>
                         <th className="px-6 py-3 text-center text-xs font-medium text-gray-400 uppercase tracking-wider">Free</th>
                         <th className="px-6 py-3 text-center text-xs font-medium text-emerald-400 uppercase tracking-wider">Pro</th>
-                        <th className="px-6 py-3 text-center text-xs font-medium text-blue-400 uppercase tracking-wider">Enterprise</th>
+                        <th className="px-6 py-3 text-center text-xs font-medium text-blue-400 uppercase tracking-wider">Team</th>
+                        <th className="px-6 py-3 text-center text-xs font-medium text-purple-400 uppercase tracking-wider">Enterprise</th>
                       </tr>
                     </thead>
                     <tbody className="bg-gray-900/30 divide-y divide-gray-700/50">
                       <tr className="hover:bg-gray-800/30">
-                        <td className="px-6 py-4 text-sm text-white">Max Memories</td>
-                        <td className="px-6 py-4 text-center text-sm text-gray-400">1,000</td>
-                        <td className="px-6 py-4 text-center text-sm text-gray-300">50,000</td>
+                        <td className="px-6 py-4 text-sm text-white">Memories</td>
+                        <td className="px-6 py-4 text-center text-sm text-gray-400">500</td>
+                        <td className="px-6 py-4 text-center text-sm text-gray-300">5,000</td>
+                        <td className="px-6 py-4 text-center text-sm text-gray-300">25,000</td>
                         <td className="px-6 py-4 text-center text-sm text-gray-300">Unlimited</td>
                       </tr>
                       <tr className="hover:bg-gray-800/30">
-                        <td className="px-6 py-4 text-sm text-white">Searches/Day</td>
-                        <td className="px-6 py-4 text-center text-sm text-gray-400">100</td>
-                        <td className="px-6 py-4 text-center text-sm text-gray-300">10,000</td>
+                        <td className="px-6 py-4 text-sm text-white">Workspaces</td>
+                        <td className="px-6 py-4 text-center text-sm text-gray-400">1</td>
+                        <td className="px-6 py-4 text-center text-sm text-gray-300">5</td>
+                        <td className="px-6 py-4 text-center text-sm text-gray-300">Unlimited</td>
                         <td className="px-6 py-4 text-center text-sm text-gray-300">Unlimited</td>
                       </tr>
                       <tr className="hover:bg-gray-800/30">
-                        <td className="px-6 py-4 text-sm text-white">Persistence</td>
-                        <td className="px-6 py-4 text-center text-sm text-gray-400">In-Memory</td>
-                        <td className="px-6 py-4 text-center text-sm text-gray-300">Redis</td>
-                        <td className="px-6 py-4 text-center text-sm text-gray-300">PostgreSQL</td>
+                        <td className="px-6 py-4 text-sm text-white">Team Members</td>
+                        <td className="px-6 py-4 text-center text-sm text-gray-400">1</td>
+                        <td className="px-6 py-4 text-center text-sm text-gray-400">1</td>
+                        <td className="px-6 py-4 text-center text-sm text-gray-300">10</td>
+                        <td className="px-6 py-4 text-center text-sm text-gray-300">Unlimited</td>
+                      </tr>
+                      <tr className="hover:bg-gray-800/30">
+                        <td className="px-6 py-4 text-sm text-white">API Access</td>
+                        <td className="px-6 py-4 text-center text-sm text-gray-400">-</td>
+                        <td className="px-6 py-4 text-center text-sm text-emerald-400">✓</td>
+                        <td className="px-6 py-4 text-center text-sm text-blue-400">✓</td>
+                        <td className="px-6 py-4 text-center text-sm text-purple-400">✓</td>
+                      </tr>
+                      <tr className="hover:bg-gray-800/30">
+                        <td className="px-6 py-4 text-sm text-white">Webhooks</td>
+                        <td className="px-6 py-4 text-center text-sm text-gray-400">-</td>
+                        <td className="px-6 py-4 text-center text-sm text-gray-400">-</td>
+                        <td className="px-6 py-4 text-center text-sm text-blue-400">3</td>
+                        <td className="px-6 py-4 text-center text-sm text-purple-400">Unlimited</td>
                       </tr>
                       <tr className="hover:bg-gray-800/30">
                         <td className="px-6 py-4 text-sm text-white">Support</td>
                         <td className="px-6 py-4 text-center text-sm text-gray-400">Community</td>
                         <td className="px-6 py-4 text-center text-sm text-gray-300">Email</td>
-                        <td className="px-6 py-4 text-center text-sm text-gray-300">Priority 24/7</td>
-                      </tr>
-                      <tr className="hover:bg-gray-800/30">
-                        <td className="px-6 py-4 text-sm text-white">Analytics</td>
-                        <td className="px-6 py-4 text-center text-sm text-gray-400">-</td>
-                        <td className="px-6 py-4 text-center text-sm text-emerald-400">✓</td>
-                        <td className="px-6 py-4 text-center text-sm text-blue-400">✓</td>
-                      </tr>
-                      <tr className="hover:bg-gray-800/30">
-                        <td className="px-6 py-4 text-sm text-white">Custom Integrations</td>
-                        <td className="px-6 py-4 text-center text-sm text-gray-400">-</td>
-                        <td className="px-6 py-4 text-center text-sm text-gray-400">-</td>
-                        <td className="px-6 py-4 text-center text-sm text-blue-400">✓</td>
+                        <td className="px-6 py-4 text-center text-sm text-gray-300">Priority</td>
+                        <td className="px-6 py-4 text-center text-sm text-purple-400">24/7 SLA</td>
                       </tr>
                       <tr className="hover:bg-gray-800/30">
                         <td className="px-6 py-4 text-sm text-white font-semibold">Price</td>
-                        <td className="px-6 py-4 text-center text-sm text-gray-400">$0/mo</td>
-                        <td className="px-6 py-4 text-center text-sm text-emerald-400 font-semibold">$29/mo</td>
-                        <td className="px-6 py-4 text-center text-sm text-blue-400 font-semibold">$99/mo</td>
+                        <td className="px-6 py-4 text-center text-sm text-gray-400">$0</td>
+                        <td className="px-6 py-4 text-center text-sm text-emerald-400 font-semibold">$12/mo</td>
+                        <td className="px-6 py-4 text-center text-sm text-blue-400 font-semibold">$49/mo</td>
+                        <td className="px-6 py-4 text-center text-sm text-purple-400 font-semibold">$199/mo</td>
                       </tr>
                     </tbody>
                   </table>

@@ -122,9 +122,7 @@ export default function BusinessPage() {
               Back to Pricing
             </Link>
             <Link href="/" className="flex items-center space-x-2">
-              <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-emerald-500 via-teal-500 to-cyan-500 flex items-center justify-center">
-                <Brain className="w-4 h-4 text-white" />
-              </div>
+              <Brain className="w-8 h-8 text-emerald-400" />
               <span className="text-lg font-bold text-white">AI Memory</span>
             </Link>
             <div className="w-32" />

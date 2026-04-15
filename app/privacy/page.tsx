@@ -247,7 +247,8 @@ export default function PrivacyPage() {
                   <h3 className="text-lg font-medium text-green-400 mb-2">13.1 Payment Processing</h3>
                   <p className="text-gray-400 leading-relaxed">
                     Payments are processed by <strong>Polar.sh</strong>, our authorized payment processor. All subscription fees 
-                    are collected and processed through Polar.sh on behalf of <strong>AI Memory / Gabriel Pitrella</strong> ("we," "us," or "owner").
+                    are collected and processed through Polar.sh on behalf of <strong>AI Memory / Gabriel Pitrella</strong>{' '}
+                    (&quot;we,&quot; &quot;us,&quot; or &quot;owner&quot;).
                   </p>
                 </div>
 

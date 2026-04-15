@@ -210,8 +210,8 @@ export default function ExtensionPage() {
                 <div className="text-gray-400">Browser Users</div>
               </div>
               <div>
-                <div className="text-4xl font-bold text-white mb-2">50K+</div>
-                <div className="text-gray-400">Active Users</div>
+                <div className="text-4xl font-bold text-white mb-2">🔒</div>
+                <div className="text-gray-400">Local-First Privacy</div>
               </div>
               <div>
                 <div className="text-4xl font-bold text-white mb-2">4</div>
@@ -290,7 +290,7 @@ export default function ExtensionPage() {
               Ready to Never Forget?
             </h2>
             <p className="text-gray-400 mb-8 max-w-xl mx-auto">
-              Join 50,000+ users who never have to repeat themselves to AI again.
+              Persistent memory across sessions — install once on your favorite browser.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <button className="inline-flex items-center justify-center px-8 py-4 text-lg font-medium rounded-xl text-white bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 transition-all shadow-lg">

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { Fragment } from 'react'
 import { ArrowLeft, Check, Brain, Sparkles, Users, Building, Zap, Shield, Globe, Clock, Rocket, ArrowRight, CheckCircle, Download } from 'lucide-react'
 import Link from 'next/link'
 
@@ -17,11 +18,10 @@ const plans = [
     features: [
       '1 browser extension',
       '500 memories stored',
-      '1,000 API calls/month',
       'ChatGPT, Claude, Gemini support',
       'Basic semantic search',
       '7-day memory retention',
-      'Local storage only',
+      'Local-first privacy — your memory stays on your device',
     ],
     cta: 'Get Started Free',
     ctaLink: '/extension',
@@ -30,17 +30,18 @@ const plans = [
   },
   {
     name: 'Pro',
-    price: '$12',
+    price: '$5',
     period: 'per month',
     description: 'For power users who need more',
     badge: 'Most Popular',
     features: [
-      'All 4 browsers supported',
-      '5,000 memories stored',
-      '50,000 API calls/month',
+      'All 4 browsers connected',
+      '5,000 memories retained',
       'Cloud sync across devices',
       'Advanced semantic search',
       '90-day memory retention',
+      'Priority recall',
+      'Private memory vault',
       'Priority email support',
       'API access',
     ],
@@ -97,10 +98,12 @@ const comparisonFeatures = [
   {
     category: 'Core Features',
     items: [
-      { name: 'Browser extensions', free: '1 browser', pro: '4 browsers', team: '4 browsers', enterprise: '4 browsers' },
-      { name: 'Memories stored', free: '500', pro: '5,000', team: '25,000', enterprise: 'Unlimited' },
-      { name: 'API calls/month', free: '1,000', pro: '50,000', team: 'Unlimited', enterprise: 'Unlimited' },
+      { name: 'Browsers connected', free: '1', pro: '4', team: '4', enterprise: '4' },
+      { name: 'Memories retained', free: '500', pro: '5,000', team: '25,000', enterprise: 'Unlimited' },
       { name: 'Cloud sync', free: false, pro: true, team: true, enterprise: true },
+      { name: 'Priority recall', free: false, pro: true, team: true, enterprise: true },
+      { name: 'Private memory vault', free: false, pro: true, team: true, enterprise: true },
+      { name: 'Team memory', free: false, pro: false, team: true, enterprise: true },
       { name: 'API access', free: false, pro: true, team: true, enterprise: true },
       { name: 'Semantic search', free: 'Basic', pro: 'Advanced', team: 'Advanced', enterprise: 'Advanced' },
     ],
@@ -280,8 +283,8 @@ export default function PricingPage() {
                 </thead>
                 <tbody>
                   {comparisonFeatures.map((section, sIndex) => (
-                    <>
-                      <tr key={`section-${sIndex}`} className="bg-gray-800/50">
+                    <Fragment key={`section-${sIndex}`}>
+                      <tr className="bg-gray-800/50">
                         <td colSpan={5} className="py-3 px-6 text-sm font-semibold text-white">
                           {section.category}
                         </td>
@@ -335,7 +338,7 @@ export default function PricingPage() {
                           </td>
                         </tr>
                       ))}
-                    </>
+                    </Fragment>
                   ))}
                 </tbody>
               </table>

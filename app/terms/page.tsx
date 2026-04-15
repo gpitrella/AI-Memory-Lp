@@ -252,7 +252,7 @@ export default function TermsPage() {
                   </p>
                   <ul className="list-disc list-inside text-gray-400 space-y-1 ml-4">
                     <li>All software code, APIs, and proprietary features</li>
-                    <li>Trademarks, logos, and branding ("AI Memory", the brain logo, etc.)</li>
+                    <li>Trademarks, logos, and branding (&quot;AI Memory&quot;, the brain logo, etc.)</li>
                     <li>Website content, design, and documentation</li>
                     <li>Marketing materials and copy</li>
                     <li>Database content and organization</li>
@@ -278,7 +278,7 @@ export default function TermsPage() {
                 <div>
                   <h3 className="text-lg font-medium text-purple-400 mb-2">15.3 Trademarks</h3>
                   <p className="text-gray-400 leading-relaxed">
-                    "AI Memory", the brain icon/logo, "aimemory.lat", and all related marks are trademarks of 
+                    &quot;AI Memory&quot;, the brain icon/logo, &quot;aimemory.lat&quot;, and all related marks are trademarks of{' '}
                     <strong> Gabriel Pitrella</strong>. You may not use these trademarks without prior written permission.
                   </p>
                 </div>
